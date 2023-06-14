@@ -48,6 +48,9 @@ body:
     attributes:
       label: Steps to reproduce
       description: Which steps do we need to take to reproduce this error?
+      placeholder: |
+        Write here the things
+        And also so many other things
   - type: textarea
     id: logs
     attributes:
