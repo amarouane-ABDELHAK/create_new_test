@@ -1,56 +1,56 @@
-name: Bug report
-about: Create a report to help us improve
-description: Request a bug/issue fix  
-title: ''
-labels: bug, help wanted
-assignees: ''
+name: Report
+description: File an issue/bug report
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping us to improve
-  - type: textarea
-    id: describe_the_bug
+        Before opening an issue, please search for the behaviour in the existing issues. 
+        
+        ---
+        
+        Thank you for taking the time to file this report. To address this issue as fast as possible, we need some information.
+  - type: input
+    id: os
     attributes:
-      label: Describe the bug
-      description: Add the bug description.
-      render: shell
+      label: Operating system
+      description: "Which operating system do you use? Please provide the version as well."
+      placeholder: "macOS Big Sur 11.5.2"
+    validations:
+      required: true  
+  - type: input
+    id: browser
+    attributes:
+      label: Browser Version
+      description: "What browsers are you seeing the problem on?"
+      placeholder: "Google Chrome"
     validations:
       required: true
-
-  - type: textarea
-    id: reproduce_the_bug
+  - type: dropdown
+    id: location
     attributes:
-      label: Steps to reproduce the behavior
-      description: Add steps to help us reproduce the bug.
-      render: shell
-      placeholder: |
-        Steps to reproduce the behavior:
-        1. Go to '...'
-        2. Click on '....'
-        3. Scroll down to '....'
-        4. See error
-
+      label: Project Location
+      description: Where is the project located?
+      options:
+        - Local
+        - Cloud
+        - Somewhere else (please specify in the description!)
+    validations:
+      required: true
   - type: textarea
-    id: expected_behavior
+    id: issue-description
     attributes:
-      label: Expected Behavior
-      description: A clear and concise description of what you expected to happen.
-      render: shell
-
+      label: Issue description
+      description: What happened?
+    validations:
+      required: true
   - type: textarea
-    id: expected_behavior
+    id: steps
     attributes:
-      label: Expected Behavior
-      description: A clear and concise description of what you expected to happen.
-      render: shell
+      label: Steps to reproduce
+      description: Which steps do we need to take to reproduce this error?
   - type: textarea
     id: logs
     attributes:
       label: Relevant log output
       description: If applicable, provide relevant log output. No need for backticks here.
       render: shell
-      placeholder: |
-        Add logs or any other context about the problem here.
-        - OS: [e.g. IOS]
-        - Version: [e.g. v.1.1.1]
