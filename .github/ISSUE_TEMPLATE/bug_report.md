@@ -1,12 +1,9 @@
----
 name: Bug report
 about: Create a report to help us improve
 description: Request a bug/issue fix  
 title: ''
 labels: bug, help wanted
 assignees: ''
-
----
 body:
   - type: markdown
     attributes:
