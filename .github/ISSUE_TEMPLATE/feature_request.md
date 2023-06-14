@@ -1,20 +1,56 @@
----
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: enhancement, question
-assignees: ''
-
----
-
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
-
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
-
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
+name: Feature Request
+description: File an issue/bug report
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening an issue, please search for the behaviour in the existing issues. 
+        
+        ---
+        
+        Thank you for taking the time to file this report. To address this issue as fast as possible, we need some information.
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      description: "Which operating system do you use? Please provide the version as well."
+      placeholder: "macOS Big Sur 11.5.2"
+    validations:
+      required: true  
+  - type: input
+    id: browser
+    attributes:
+      label: Browser Version
+      description: "What browsers are you seeing the problem on?"
+      placeholder: "Google Chrome"
+    validations:
+      required: true
+  - type: dropdown
+    id: location
+    attributes:
+      label: Project Location
+      description: Where is the project located?
+      options:
+        - Local
+        - Cloud
+        - Somewhere else (please specify in the description!)
+    validations:
+      required: true
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Issue description
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Which steps do we need to take to reproduce this error?
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: If applicable, provide relevant log output. No need for backticks here.
+      render: shell
